@@ -1,0 +1,45 @@
+# ==============================
+# Common (shared across all env)
+# ==============================
+spring:
+  application:
+    name: discovery-service
+
+eureka:
+  client:
+    # The server does not register itself
+    register-with-eureka: false
+
+    # The server does not fetch the registry
+    fetch-registry: false
+
+# ===================================
+# LOCAL PROFILE
+# ===================================
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+  server:
+    port: 8761
+
+# ===================================
+# DOCKER PROFILE
+# ===================================
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+
+
+# ===================================
+# KUBERNETES PROFILE
+# ===================================
+---
+spring:
+  config:
+    activate:
+      on-profile: k8s
