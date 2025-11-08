@@ -22,8 +22,8 @@ spring:
     activate:
       on-profile: local
 
-  server:
-    port: 8761
+server:
+  port: 8761
 
 # ===================================
 # DOCKER PROFILE
