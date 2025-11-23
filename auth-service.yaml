@@ -1,0 +1,66 @@
+# ==============================
+# Common (shared across all env)
+# ==============================
+spring:
+  application:
+    name: auth-service
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+# ===================================
+# LOCAL PROFILE
+# ===================================
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/InventoryDB
+    username: abderrahmane
+    password: abderrahmane
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8086
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+# ===================================
+# DOCKER PROFILE
+# ===================================
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-server:8761/eureka/
+
+
+# ===================================
+# KUBERNETES PROFILE
+# ===================================
+---
+spring:
+  config:
+    activate:
+      on-profile: k8s
