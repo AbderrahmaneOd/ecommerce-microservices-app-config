@@ -20,7 +20,7 @@ spring:
 
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/InventoryDB
+    url: jdbc:postgresql://localhost:5432/AuthDB
     username: abderrahmane
     password: abderrahmane
 
