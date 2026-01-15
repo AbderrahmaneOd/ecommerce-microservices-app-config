@@ -28,6 +28,10 @@ spring:
         predicates:
         - Path=/api/users/**
 
+      - id: auth-service
+        uri: lb://auth-service
+        predicates:
+        - Path=/api/auth/**
 # ===================================
 # LOCAL PROFILE
 # ===================================
