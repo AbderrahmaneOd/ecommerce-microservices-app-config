@@ -32,6 +32,10 @@ spring:
       hibernate:
         format_sql: true
 
+  kafka:
+    topic:
+      name: user-registration
+
 server:
   port: 8086
 
