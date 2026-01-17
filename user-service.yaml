@@ -33,7 +33,7 @@ spring:
       ddl-auto: create-drop
 
   kafka:
-    bootstrap-servers: localhost:9093
+    bootstrap-servers: localhost:9092
     topic:
       name: user-registration
     consumer:
