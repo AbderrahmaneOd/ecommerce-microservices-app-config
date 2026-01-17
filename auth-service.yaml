@@ -37,8 +37,8 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-      properties:
-        spring.json.add.type.headers: false # Disable type headers ("__TypeId__")
+      #properties:
+      #  spring.json.add.type.headers: false # Disable type headers ("__TypeId__")
     consumer:
       properties:
         spring.json.trusted.packages: "*"
